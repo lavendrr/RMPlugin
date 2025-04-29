@@ -15,8 +15,8 @@
   "modules": [
     {
       "slug": "RMMute",
-      "name": "RM Mute",
-      "description": "RM mute module for testing VCV module dev",
+      "name": "RMMute",
+      "description": "test line",
       "tags": []
     }
   ]
