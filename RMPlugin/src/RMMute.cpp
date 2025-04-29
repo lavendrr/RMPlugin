@@ -72,14 +72,13 @@ struct RMMuteWidget : ModuleWidget {
 		addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		// Add the mute button with integrated light
-		// Note: We're using direct pixel coordinates instead of mm2px since the SVG uses pixel coordinates
+		// Add the mute button with integrated light at the yellow circle position
 		addParam(createLightParamCentered<VCVLightButton<MediumSimpleLight<RedLight>>>(
-			Vec(200, 200), module, RMMute::MUTE_PARAM, RMMute::MUTE_LIGHT));
+			mm2px(Vec(200, 200)), module, RMMute::MUTE_PARAM, RMMute::MUTE_LIGHT));
 
 		// Add input and output ports
-		addInput(createInputCentered<PJ301MPort>(Vec(93.69, 204.03), module, RMMute::AUDIO_INPUT));
-		addOutput(createOutputCentered<PJ301MPort>(Vec(357.73, 249.71), module, RMMute::AUDIO_OUTPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(126.199, 88.093)), module, RMMute::AUDIO_INPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(126.199, 120.0)), module, RMMute::AUDIO_OUTPUT));
 	}
 };
 
