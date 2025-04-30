@@ -18,6 +18,14 @@
       "name": "RMMute",
       "description": "test line",
       "tags": []
+    },
+    {
+      "slug": "RMDelay",
+      "name": "RMDelay",
+      "description": "Ricky Moctezuma custom delay",
+      "tags": [
+        "delay"
+      ]
     }
   ]
 }
